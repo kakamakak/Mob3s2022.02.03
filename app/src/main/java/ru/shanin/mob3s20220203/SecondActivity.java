@@ -3,14 +3,18 @@ package ru.shanin.mob3s20220203;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.gson.Gson;
 
 public class SecondActivity extends AppCompatActivity {
 
     private static final String TEXT_INPUT = "input text";
     private String inputText;
+    private Contact myContact;
 
     private TextView textView;
 
@@ -28,6 +32,9 @@ public class SecondActivity extends AppCompatActivity {
         if (!getIntent().hasExtra(TEXT_INPUT))
             throw new RuntimeException("There is no input data");
         inputText = getIntent().getStringExtra(TEXT_INPUT);
+        myContact = (new Gson()).fromJson(inputText, Contact.class);
+        Log.w("parseIntent", myContact.toMyString());
+
     }
 
     @Override
@@ -41,6 +48,6 @@ public class SecondActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        textView.setText(inputText);
+        textView.setText( myContact.toMyString());
     }
 }
