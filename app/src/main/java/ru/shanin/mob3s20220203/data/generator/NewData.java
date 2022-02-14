@@ -1,4 +1,7 @@
-package ru.shanin.mob3s20220203;
+package ru.shanin.mob3s20220203.data.generator;
+
+import ru.shanin.mob3s20220203.domain.entity.Contact;
+import ru.shanin.mob3s20220203.domain.entity.ContactInfo;
 
 public class NewData {
 
@@ -60,9 +63,11 @@ public class NewData {
         int age = genAge();
 
         return new Contact(
-                fn, sn,
-                age,
-                em, ph
+                new ContactInfo(
+                        fn, sn,
+                        age,
+                        em, ph
+                )
         );
 
 

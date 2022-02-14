@@ -1,4 +1,4 @@
-package ru.shanin.mob3s20220203;
+package ru.shanin.mob3s20220203._old;
 
 import android.app.ListActivity;
 import android.content.Intent;
@@ -9,6 +9,9 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.google.gson.Gson;
+
+import ru.shanin.mob3s20220203.data.generator.NewData;
+import ru.shanin.mob3s20220203.domain.entity.Contact;
 
 public class MainActivity extends ListActivity {
 

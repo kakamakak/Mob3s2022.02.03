@@ -1,4 +1,4 @@
-package ru.shanin.mob3s20220203;
+package ru.shanin.mob3s20220203._old;
 
 import android.content.Context;
 import android.content.Intent;
@@ -9,6 +9,9 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.gson.Gson;
+
+import ru.shanin.mob3s20220203.R;
+import ru.shanin.mob3s20220203.domain.entity.Contact;
 
 public class SecondActivity extends AppCompatActivity {
 
