@@ -1,16 +1,16 @@
 package ru.shanin.mob3s20220203.presentation.main;
 
 import android.os.Bundle;
-import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.RecyclerView;
 
 import ru.shanin.mob3s20220203.R;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextView tv;
+    private RecyclerView recyclerView;
 
     private MainViewModel mainViewModel;
 
@@ -23,13 +23,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initView() {
-        tv = findViewById(R.id.textView);
+        recyclerView = findViewById(R.id.recyclerView);
 
     }
 
     private void initViewModel() {
         mainViewModel = new ViewModelProvider(this).get(MainViewModel.class);
-        mainViewModel.dataLiveData.observe(this, data -> tv.setText(data.toString()));
+        mainViewModel.dataLiveData.observe(this, data -> );
     }
 
 
